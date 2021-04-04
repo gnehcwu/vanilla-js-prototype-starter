@@ -1,4 +1,4 @@
-import './assets/styles/blokkfont.css';
+import './assets/styles/preset.css';
 import './assets/styles/custom.css';
 
-// Your code goes here...
+// Custom logic goes here...

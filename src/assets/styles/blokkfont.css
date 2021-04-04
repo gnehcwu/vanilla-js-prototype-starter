@@ -27,4 +27,5 @@ body {
 .is-blokk
   *:not([class*='fa-']):not([class*='mdi']):not([class*='oi']):not([class*='ion-']):not(.reset-blokk) {
   font-family: 'BLOKK' !important;
+  line-height: 1.5 !important;
 }

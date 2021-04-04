@@ -22,7 +22,28 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    'postcss-preset-env',
+                    {
+                      stage: 0,
+                      features: {
+                        'nesting-rules': true,
+                      },
+                    },
+                  ],
+                ],
+              },
+            },
+          },
+        ],
       },
     ],
   },
