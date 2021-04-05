@@ -2,7 +2,6 @@
   "name": "vanilla-js-prototype-starter",
   "version": "1.0.0",
   "description": "A prototype starter template for trying any front end idea at your need.",
-  "main": "index.js",
   "scripts": {
     "start": "webpack serve --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js"
