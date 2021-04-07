@@ -1,8 +1,7 @@
 @font-face {
   font-family: 'BLOKK';
   src: url('../fonts/BLOKKNeue-Regular.eot');
-  src: url('../fonts/BLOKKNeue-Regular-iefix.eot') format('embedded-opentype'),
-    url('../fonts/BLOKKNeue-Regular.woff2') format('woff2'),
+  src: url('../fonts/BLOKKNeue-Regular.woff2') format('woff2'),
     url('../fonts/BLOKKNeue-Regular.woff') format('woff'),
     url('../fonts/BLOKKNeue-Regular.otf') format('opentype'),
     url('../fonts/BLOKKNeue-Regular.ttf') format('truetype'),

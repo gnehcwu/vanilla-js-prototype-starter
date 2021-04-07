@@ -1,20 +1,20 @@
+const path = require('path');
+
 module.exports = {
   entry: './src/index.js',
   module: {
     rules: [
       {
         test: /\.(eot|otf|svg|ttf|woff|woff2)/,
-        use: {
-          loader: 'file-loader',
-          options: {
-            name: '[name].[hash].[ext]',
-            outputPath: 'assets/fonts',
-          },
+        include: [path.resolve(__dirname, 'src/assets/fonts/')],
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[hash][ext][query]',
         },
       },
       {
         test: /\.m?js$/,
-        exclude: /(node_modules)/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {

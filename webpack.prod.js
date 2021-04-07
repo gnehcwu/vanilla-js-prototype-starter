@@ -14,7 +14,7 @@ module.exports = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: 'assets/styles/[name].[contenthash].css',
     }),
   ],
   module: {
@@ -22,20 +22,18 @@ module.exports = merge(common, {
       {
         test: /\.css$/,
         use: [
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '/',
+            },
+          },
           'css-loader',
           {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  [
-                    'postcss-preset-env',
-                    {
-                      stage: 0,
-                    },
-                  ],
-                ],
+                plugins: [['postcss-preset-env', { stage: 0 }]],
               },
             },
           },

@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'development',
-  devtool: 'eval-source-map',
+  devtool: 'inline-source-map',
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -26,14 +26,7 @@ module.exports = merge(common, {
             loader: 'postcss-loader',
             options: {
               postcssOptions: {
-                plugins: [
-                  [
-                    'postcss-preset-env',
-                    {
-                      stage: 0,
-                    },
-                  ],
-                ],
+                plugins: [['postcss-preset-env', { stage: 0 }]],
               },
             },
           },
